@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
   overflow: hidden;
-  background: purple;
+  background: black;
 }
 
 #bg-video {
@@ -18,12 +18,24 @@ html, body {
 
 #murasaki {
   position: absolute;
-  bottom: 0;                /* anchor to bottom */
-  left: 50%;                /* center horizontally */
+  bottom: 0;
+  left: 50%;
   transform: translateX(-50%);
-  width: 100vw;             /* scale up to viewport width */
-  max-width: none;          /* allow it to grow */
-  height: auto;             /* keep aspect ratio */
+  width: 100vw;
+  max-width: none;
+  height: auto;
   z-index: 1;
   pointer-events: none;
+}
+
+#track-name {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  text-decoration: underline;
+  z-index: 2;
 }
