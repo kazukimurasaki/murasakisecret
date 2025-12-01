@@ -67,4 +67,39 @@ body {
 #more-text {
   max-width: 800px;
   padding: 20px;
+
+.spacing-1 { margin-bottom: 1em; }
+.spacing-5 { margin-bottom: 5em; }
+.spacing-10 { margin-bottom: 10em; }
+
+/* Existing styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px; /* top spacing */
+}
+
+#more-text {
+  max-width: 800px;
+  padding: 20px;
+}
+
+#reward-img {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+#track-credit {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+  font-style: italic;
 }
