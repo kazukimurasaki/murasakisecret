@@ -18,12 +18,12 @@ html, body {
 
 #murasaki {
   position: absolute;
-  bottom: 0;                     /* sticks to bottom of the screen */
-  left: 50%;                     /* center horizontally */
+  bottom: 0;                /* anchor to bottom */
+  left: 50%;                /* center horizontally */
   transform: translateX(-50%);
-  width: 80vw;                    /* scale to viewport width */
-  max-width: 1920px;              /* prevent it from stretching too far */
-  height: auto;                   /* maintain aspect ratio */
+  width: 100vw;             /* scale up to viewport width */
+  max-width: none;          /* allow it to grow */
+  height: auto;             /* keep aspect ratio */
   z-index: 1;
   pointer-events: none;
 }
