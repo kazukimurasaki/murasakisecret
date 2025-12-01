@@ -1,7 +1,8 @@
 const tracks = [
-  { name: "Track 1", src: "assets/music/track1.mp3" },
-  { name: "Track 2", src: "assets/music/track2.mp3" },
-  { name: "Track 3", src: "assets/music/track3.mp3" }
+  { name: "Track 1", src: "assets/music/diamond.mp3" },
+  { name: "Track 2", src: "assets/music/whowillknow.mp3" },
+  { name: "Track 1", src: "assets/music/static.mp3" },
+  { name: "Track 3", src: "assets/music/fadingaway.mp3" }
 ];
 
 const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
