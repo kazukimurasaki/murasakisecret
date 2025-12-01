@@ -21,10 +21,9 @@ html, body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw;  /* scale up to fill width */
-  height: auto;  /* maintain aspect ratio */
-  max-width: none;
-  z-index: 1;    /* in front of background */
+  width: 100vw;
+  height: auto;
+  z-index: 1;   /* keep below the button */
   pointer-events: none;
 }
 
@@ -38,18 +37,20 @@ html, body {
   font-size: 18px;
   text-decoration: underline;
   z-index: 2;
+}
 
 #read-more {
-  position: fixed;      /* stays in top-left while scrolling */
+  position: fixed;   /* stays in top-left */
   top: 20px;
   left: 20px;
-  color: white;         /* text color */
+  color: white;
   font-family: sans-serif;
   font-size: 16px;
   text-decoration: underline;
-  z-index: 2;           /* above images */
+  z-index: 10;       /* higher than PNG overlay */
   cursor: pointer;
-
+}
+  
 body {
   margin: 0;
   padding: 0;
