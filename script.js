@@ -21,7 +21,6 @@ const tracks = [
   }
 ];
 
-// get last track index from localStorage
 let lastIndex = localStorage.getItem("lastTrackIndex");
 
 const audio = document.getElementById("bg-music");
@@ -35,23 +34,20 @@ function playRandomTrack() {
 
   const track = tracks[newIndex];
 
-  // update audio
   audio.src = track.src;
   audio.play().catch(() => {
     console.warn("Autoplay blocked — user interaction needed.");
   });
 
-  // update track name and link
   trackName.textContent = track.name;
   trackName.href = track.url;
 
-  // store the current index
   lastIndex = newIndex;
   localStorage.setItem("lastTrackIndex", newIndex);
 }
 
-// play the first track on page load
+// Play first track on load
 playRandomTrack();
 
-// when a track ends, play a new random one
+// Trigger next track when the current one ends
 audio.addEventListener("ended", playRandomTrack);
