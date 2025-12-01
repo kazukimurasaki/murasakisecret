@@ -1,37 +1,17 @@
-window.addEventListener("load", () => {
-  const tracks = [
-    "assets/music/static.mp3",
-    "assets/music/diamond.mp3",
-    "assets/music/whowillknow.mp3",
-	"assets/music/fadingaway.mp3",
-  ];
+const tracks = [
+  { name: "Track 1", src: "assets/music/track1.mp3" },
+  { name: "Track 2", src: "assets/music/track2.mp3" },
+  { name: "Track 3", src: "assets/music/track3.mp3" }
+];
 
-  // Pick a random track
-  const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
 
-  const audio = document.getElementById("bg-music");
-  audio.src = randomTrack;
-  audio.volume = 0.5;  // adjust as needed
-  audio.play().catch(() => {
-    // Browser might block autoplay; show simple click-to-play overlay
-    const overlay = document.createElement("div");
-    overlay.textContent = "Click to begin";
-    Object.assign(overlay.style, {
-      position: "fixed",
-      inset: 0,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      color: "white",
-      fontSize: "1.5em",
-      background: "rgba(0, 0, 0, 0.6)",
-      cursor: "pointer",
-      zIndex: 2
-    });
-    overlay.onclick = () => {
-      audio.play();
-      overlay.remove();
-    };
-    document.body.appendChild(overlay);
-  });
+const audio = document.getElementById("bg-music");
+const trackName = document.getElementById("track-name");
+
+audio.src = randomTrack.src;
+trackName.textContent = randomTrack.name;
+
+audio.play().catch(() => {
+  console.warn("err");
 });
