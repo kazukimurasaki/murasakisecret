@@ -125,3 +125,48 @@ body#more-page {
   color: #aaa;
   margin-bottom: 100px;
 }
+
+/* === Password page styling === */
+body#password-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* full viewport */
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#password-container {
+  padding: 40px;
+  border: 2px solid #444;
+  border-radius: 10px;
+  background: #111;
+}
+
+#password-input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #222;
+  color: white;
+}
+
+#submit-password {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+#submit-password:hover {
+  background: #555;
+}
