@@ -183,3 +183,26 @@ body#password-page {
 #submit-password:hover {
   background: #555;
 }
+
+/* === warning page styling === */
+#gate-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: 'The Tojo Captioner', sans-serif;
+}
+
+#continue-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
