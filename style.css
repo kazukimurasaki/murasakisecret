@@ -1,3 +1,16 @@
+/* Load custom font */
+@font-face {
+  font-family: "The Tojo Captioner";
+  src: url("assets/fonts/TheTojoCaptioner-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the font globally */
+body, html {
+  font-family: "The Tojo Captioner", sans-serif;
+}
+
 html, body {
   margin: 0;
   padding: 0;
