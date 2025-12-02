@@ -1,21 +1,21 @@
 const tracks = [
   { 
-    name: "Static (R3 Music Box)", 
+    name: "Static by Flavor Foley (R3 Music Box)", 
     src: "assets/music/static.mp3", 
     url: "https://www.youtube.com/watch?v=eBwmRPTUVJE" 
   },
   { 
-    name: "I'm Fading Away (R3 Music Box)", 
+    name: "I'm Fading Away from Ryu Ga Gotoku Gaiden (R3 Music Box)", 
     src: "assets/music/fadingaway.mp3", 
     url: "https://www.youtube.com/watch?v=LB2HHoUh8_k" 
   },
   { 
-    name: "Today is a Diamond (R3 Music Box)", 
+    name: "Today is a Diamond from Ryu Ga Gotoku 6 (R3 Music Box)", 
     src: "assets/music/diamond.mp3", 
     url: "https://www.youtube.com/watch?v=XXXXX3" 
   },
   { 
-    name: "Who Will Know (R3 Music Box)", 
+    name: "Who Will Know by Shiro Sagisu (R3 Music Box)", 
     src: "assets/music/whowillknow.mp3", 
     url: "https://www.youtube.com/watch?v=SWZUi2XJ_A4" 
   },
