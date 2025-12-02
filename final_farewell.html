@@ -9,34 +9,100 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       background: black;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
     }
 
     #vhs-recorder {
       width: 300px; /* adjust size as needed */
       cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    #transcript-btn {
+      display: none; /* hidden until VHS is clicked */
+      padding: 10px 20px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    #transcript-btn:hover {
+      background: #ddd;
+    }
+
+    #transcript {
+      display: none; /* hidden until button clicked */
+      max-width: 90%;
+      max-height: 50vh;
+      overflow-y: auto;
+      text-align: left;
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      line-height: 1.6;
+      white-space: pre-wrap; /* preserves line breaks */
+      font-family: "The Tojo Captioner", sans-serif;
     }
   </style>
 </head>
 <body>
-  <!-- Transparent VHS image -->
+  <!-- VHS player -->
   <img id="vhs-recorder" src="assets/tapeplayer.png" alt="Tape Player" title="Click to play the last farewell.">
 
   <!-- Audio file -->
   <audio id="farewell-audio" src="assets/farewell.mp3"></audio>
 
+  <!-- Transcript button -->
+  <button id="transcript-btn">Transcript For The Hard of Hearing</button>
+
+  <!-- Transcript text -->
+  <div id="transcript">
+Hello there, this is the real Kazuki Murasaki speaking directly to you right now. If you made it this far into the story of Murasaki Everywhere, I just want to say congratulations and well, thank you for sticking around this long, you know?
+
+I... I have to admit, I... I genuinely don't expect a lot of people to be so invested into the story and make it this far, so...
+
+If you're one of those people that actually made it the legitimate way, then more power to you, honestly. I really, really want to honor you, but, you know, I suppose this little fun website will have to suffice. Because, well, this is the end of Murasaki Everywhere, and with it, the permanent retirement of the Blakekuza mod series. So, you know, be proud of yourself, you know.
+
+You actually read through the whole story about Murasaki. And speaking of Murasaki Everywhere, I just want to leave a little message right here. Murasaki Everywhere, the way I wanted to portray it is a sort of deconstructed isekai, where it is like an isekai into Touhou Project and all that, but I just wanted to strip away all of the fantastical and whimsical elements, you know, the glitz and glamour of most isekai anime like, I don't know, Konosuba, I wanted to make Murasaki's perspective on Gensokyo a lot more bleak and darker.
+
+'Cause, remember, when he woke up in Gensokyo, in the middle of a blizzard no less, he was... completely amnesic. Not a single memory to his mind. And, you know, in his shoes, you would be shitting yourself.
+
+And that's the way I wanted to go with Murasaki Everywhere. I didn't want to make it a silly shitpost project. No, I wanted to take it seriously. And honestly, I guess you could say it paid off. Look where we are now. Like, six whole Blakeuza mods. I think six. And this entire story to go with the mods. It's crazy, huh? And, like, what? I've been making this for almost two years now. It's crazy.
+
+And what's even crazier is the fact that you stuck around for this long. So, again, congratulations and thank you for supporting my silly little project and supporting Blake Izayoi as well.
+
+And speaking of Blake, Blake-chan, if you're hearing this, thank you, man, from the bottom of my heart for inspiring and starting all of this. You've been a huge inspiration to me, man. Keep it up. And thank you again.
+
+And to the rest of you once more, thank you for being with me for this long. End of tape.
+  </div>
+
   <script>
     const vhs = document.getElementById('vhs-recorder');
     const audio = document.getElementById('farewell-audio');
+    const transcriptBtn = document.getElementById('transcript-btn');
+    const transcript = document.getElementById('transcript');
 
+    // Play audio and show transcript button on VHS click
     vhs.addEventListener('click', () => {
-      audio.play().catch(() => {
-        console.warn("Audio autoplay blocked. Click required.");
-      });
+      audio.play().catch(() => console.warn("Audio autoplay blocked. Click required."));
+      transcriptBtn.style.display = 'inline-block';
+    });
+
+    // Toggle transcript visibility
+    transcriptBtn.addEventListener('click', () => {
+      transcript.style.display = transcript.style.display === 'none' ? 'block' : 'none';
     });
   </script>
 </body>
