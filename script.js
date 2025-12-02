@@ -12,7 +12,7 @@ const tracks = [
   { 
     name: "Today is a Diamond from Ryu Ga Gotoku 6 (R3 Music Box)", 
     src: "assets/music/diamond.mp3", 
-    url: "https://www.youtube.com/watch?v=XXXXX3" 
+    url: "https://www.youtube.com/watch?v=ygpqZfGEXLU" 
   },
   { 
     name: "Who Will Know by Shiro Sagisu (R3 Music Box)", 
@@ -22,47 +22,47 @@ const tracks = [
   { 
     name: "Masterpiece by CG5 (R3 Music Box)",
     src: "assets/music/masterpiece.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX1"
+    url: "https://www.youtube.com/watch?v=H0TxhYwmgWg"
   },
   { 
     name: "Always Running by AJ Dispirito (R3 Music Box)",
     src: "assets/music/alwaysrunning.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX2"
+    url: "https://www.youtube.com/watch?v=HzDzN4vSECQ"
   },
   { 
     name: "Chase by batta (R3 Music Box)",
     src: "assets/music/chase.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX3"
+    url: "https://www.youtube.com/watch?v=D7GhO8UAChE"
   },
   { 
     name: "BIRDBRAIN by Jamie Paige & OK Glass (R3 Music Box)",
     src: "assets/music/birdbrain.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX4"
+    url: "https://www.youtube.com/watch?v=2wguschCHm4"
   },
   { 
     name: "Runner by Bafuku Slump (R3 Music Box)",
     src: "assets/music/runner.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX5"
+    url: "https://www.youtube.com/watch?v=o_VRCIQRw6w"
   },
   { 
     name: "Fight Til I'm Good Enough by The Living Tombstone (R3 Music Box)",
     src: "assets/music/fighttillimgoodenough.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX6"
+    url: "https://www.youtube.com/watch?v=Z0fBs17QABA"
   },
   { 
     name: "Spoken For by Flavor Foley (R3 Music Box)",
     src: "assets/music/spokenfor.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX7"
+    url: "https://www.youtube.com/watch?v=gkwExaJ0fZc"
   },
   { 
     name: "I'd Rather Sleep by Kero Kero Bonito (R3 Music Box)",
     src: "assets/music/rathersleep.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX8"
+    url: "https://www.youtube.com/watch?v=X0Kvlb6AU84"
   },
   { 
     name: "Bubble by Shonan no Kaze (R3 Music Box)",
     src: "assets/music/bubble.mp3",
-    url: "https://www.youtube.com/watch?v=XXXXX9"
+    url: "https://www.youtube.com/watch?v=8EiGiESUbvc"
   }
 ];
 
