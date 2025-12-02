@@ -5,6 +5,7 @@ html, body {
   background: black;
 }
 
+/* --- Background and overlay elements --- */
 #bg {
   position: fixed;
   top: 0;
@@ -12,7 +13,7 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;  /* no stretch */
-  z-index: -2;        /* please god let this work */
+  z-index: -2;
 }
 
 #murasaki {
@@ -22,7 +23,7 @@ html, body {
   transform: translateX(-50%);
   width: 100vw;
   height: auto;
-  z-index: 1;   /* keep below the button */
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -39,17 +40,18 @@ html, body {
 }
 
 #read-more {
-  position: fixed;   /* stays in top-left */
+  position: fixed;
   top: 20px;
   left: 20px;
   color: white;
   font-family: sans-serif;
   font-size: 16px;
   text-decoration: underline;
-  z-index: 10;       /* higher than PNG overlay */
+  z-index: 10;
   cursor: pointer;
 }
-  
+
+/* --- Default body styling (for intro page) --- */
 body {
   margin: 0;
   padding: 0;
@@ -63,30 +65,17 @@ body {
   text-align: center;
 }
 
+/* --- Shared section styling --- */
 #more-text {
   max-width: 800px;
   padding: 20px;
+}
 
 .spacing-1 { margin-bottom: 1em; }
 .spacing-5 { margin-bottom: 5em; }
 .spacing-10 { margin-bottom: 10em; }
 
-/* Existing styles */
-body {
-  margin: 0;
-  padding: 0;
-  background: black;
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-#more-text {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;  /* top + sides padding for spacing */
-}
-
+/* --- Additional general styling --- */
 #reward-img {
   margin-top: 20px;
   max-width: 100%;
@@ -98,4 +87,41 @@ body {
   font-size: 14px;
   color: #ccc;
   font-style: italic;
+}
+
+/* ========================================================= */
+/* OVERRIDES for more.html only                              */
+/* ========================================================= */
+
+body#more-page {
+  display: block;          /* Disable flexbox centering */
+  height: auto;            /* Allow body to grow with content */
+  overflow-y: auto;        /* Enable vertical scrolling */
+  overflow-x: hidden;      /* Prevent horizontal overflow */
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#more-page #more-text {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  line-height: 1.8;
+}
+
+#more-page #reward-img {
+  display: block;
+  margin: 40px auto 10px;
+  max-width: 80%;
+  height: auto;
+}
+
+#more-page #track-credit {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 100px;
 }
