@@ -63,6 +63,42 @@ const tracks = [
     name: "Bubble by Shonan no Kaze (R3 Music Box)",
     src: "assets/music/bubble.mp3",
     url: "https://www.youtube.com/watch?v=8EiGiESUbvc"
+  },
+  { 
+    name: "Drunk by The Living Tombstone (R3 Music Box)",
+    src: "assets/music/drunk.mp3",
+    url: "https://www.youtube.com/watch?v=kPyl1nfZFS4"
+  },
+  { 
+    name: "Sunburn by The Living Tombstone (R3 Music Box)",
+    src: "assets/music/sunburn.mp3",
+    url: "https://www.youtube.com/watch?v=OmUdc7IjRFc"
+  },
+  { 
+    name: "Love I Need by The Living Tombstone (R3 Music Box)",
+    src: "assets/music/loveineed.mp3",
+    url: "https://www.youtube.com/watch?v=sDuFfCdnXmU"
+  },
+  { 
+    name: "anemoia by Oliver Buckland",
+    src: "assets/music/anemoia.mp3",
+    url: "https://www.youtube.com/watch?v=Q0guReRtGWI"
+    // Non-commercial use permitted with credit per artist’s description
+  },
+  { 
+    name: "Your New Home by Gooseworx & Evan Alderete (R3 Music Box)",
+    src: "assets/music/yournewhome.mp3",
+    url: "https://www.youtube.com/watch?v=wmMGH6fcI5E"
+  },
+  { 
+    name: "Arpeggio by ALEXANDROS (R3 Music Box)",
+    src: "assets/music/arpeggio.mp3",
+    url: "https://www.youtube.com/watch?v=lBxq9R3dGvA"
+  },
+  { 
+    name: "Rasen by jon-YAKITORY feat. Ado (R3 Music Box)",
+    src: "assets/music/rasen.mp3",
+    url: "https://www.youtube.com/watch?v=PFvsHw5IdS8"
   }
 ];
 
