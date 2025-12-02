@@ -5,58 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page styles */
+    body#more-page {
+      background-color: black;
+      color: white;
+      font-family: 'The Tojo Captioner', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #more-text {
+      max-width: 900px;      /* Constrain width */
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    #more-text p {
+      margin: 20px 0;
+    }
+
+    #more-text img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 40px auto;
+    }
+
+    #track-credit {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    /* Optional: fade in text */
+    #more-text {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Link styling */
+    #final-message {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    #final-message:hover {
+      background-color: #ddd;
+    }
+  </style>
 </head>
 <body id="more-page">
   <div id="more-text">
     <p>If you have made it this far, congratulations.</p>
-    <br>
     <p>You have truly proven your dedication to Murasaki's story.</p>
-    <br>
-    <p>But more importantly...</p>
-    <br>
-    <p>You've made Murasaki's suffering finally heard.</p>
-    <br>
+    <p>But more importantly, you've made Murasaki's suffering finally heard.</p>
     <p>He won't have to hold the pain by himself anymore.</p>
-    <br>
-    <p>His inner child and soul can finally be at rest.</p>
-    <p>He can finally put down the mask of the Mad Dog.</p>
-    <br>
-    <p>And maybe... Just maybe...</p>
-    <br>
-    <br>
-    <p>He can finally find purpose in himself.</p>
-    <br>
-    <br>
-    <p>Just keep this question in the back of your mind<br>if you want to look back on Murasaki's journey across Gensokyo...</p>
-    <br>
+    <p>His inner child and soul can finally be at rest. He can finally put down the mask of the Mad Dog.</p>
+    <p>And maybe... Just maybe... he can finally find purpose in himself.</p>
+    <p>Just keep this question in the back of your mind if you want to look back on Murasaki's journey across Gensokyo...</p>
     <p><strong><em>Just how remarkable can one human be... in a world where divinity is ordinary?</em></strong></p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
-    
     <img src="assets/itsfinallyover.png" alt="Thank you." title="Thank you.">
 
-    
-    <audio id="bg-music" src="assets/music/neverendingnight.mp3" autoplay loop style="display:none;"></audio>  
-    
-    
+    <audio id="bg-music" src="assets/music/neverendingnight.mp3" autoplay loop style="display:none;"></audio>
     <p id="track-credit">Track credit: Toby Fox - Neverending Night</p>
-    <br>
-    <br>
-    <p>Thank you for sticking around for this long.</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+    <a id="final-message" href="final_farewell.html">Click here for one last message from Murasaki...</a>
   </div>
 </body>
 </html>
