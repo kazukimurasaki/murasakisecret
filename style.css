@@ -75,22 +75,17 @@ body {
 /* Existing styles */
 body {
   margin: 0;
-  padding: 20px 0;      /* optional top/bottom padding */
+  padding: 20px 0;
   background: black;
   color: white;
   font-family: sans-serif;
   text-align: center;
-  line-height: 1.5em;   /* basic line height */
 }
 
 #more-text {
   max-width: 800px;
-  margin: 0 auto; /* horizontally center */
+  margin: 0 auto;
 }
-
-.spacing-1 { margin-bottom: 1em; }
-.spacing-5 { margin-bottom: 5em; }
-.spacing-10 { margin-bottom: 10em; }
 
 #reward-img {
   margin-top: 20px;
