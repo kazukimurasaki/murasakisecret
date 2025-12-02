@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heads Up!</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    if (/Mobi|Android|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      window.location.href = "nomobile.html";
+    }
+  </script>
   <style>
     /* Gate page styles */
     #gate-page {
@@ -46,13 +51,6 @@
   </style>
 </head>
 <body id="gate-page">
-<script>
-  // Basic mobile detector
-  if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    // Redirect to the mobile-block page
-    window.location.href = "nomobile.html";
-  }
-</script>
   <div id="gate-text">
     <h2>Heads up!</h2>
     <p>Before proceeding to the next page, please make sure that:</p>
