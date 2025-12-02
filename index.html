@@ -46,6 +46,13 @@
   </style>
 </head>
 <body id="gate-page">
+<script>
+  // Basic mobile detector
+  if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    // Redirect to the mobile-block page
+    window.location.href = "mobile.html";
+  }
+</script>
   <div id="gate-text">
     <h2>Heads up!</h2>
     <p>Before proceeding to the next page, please make sure that:</p>
