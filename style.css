@@ -75,12 +75,13 @@ body {
 /* Existing styles */
 body {
   margin: 0;
-  padding: 40px 20px;  /* top/bottom and side padding */
+  padding: 20px 0; /* optional top/bottom padding */
+  min-height: 100vh;
   background: black;
   color: white;
   font-family: sans-serif;
+  display: block; /* change from flex to block for scrolling */
   text-align: center;
-  /* remove height: 100% */
 }
 
 #more-text {
