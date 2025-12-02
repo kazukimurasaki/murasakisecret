@@ -74,7 +74,7 @@ body {
 /* Existing styles */
 body {
   margin: 0;
-  padding: 20px 0;
+  padding: 0;
   background: black;
   color: white;
   font-family: sans-serif;
@@ -84,6 +84,7 @@ body {
 #more-text {
   max-width: 800px;
   margin: 0 auto;
+  padding: 40px 20px;  /* top + sides padding for spacing */
 }
 
 #reward-img {
