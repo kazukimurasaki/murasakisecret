@@ -6,40 +6,7 @@
   <title>Thank You</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Page styles */
-    body#more-page {
-      background-color: black;
-      color: white;
-      font-family: 'The Tojo Captioner', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-
-    #more-text {
-      max-width: 900px;      /* Constrain width */
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    #more-text p {
-      margin: 20px 0;
-    }
-
-    #more-text img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 40px auto;
-    }
-
-    #track-credit {
-      margin-top: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-
-    /* Optional: fade in text */
+    /* Fade-in animation for text */
     #more-text {
       opacity: 0;
       transform: translateY(20px);
@@ -53,7 +20,7 @@
       }
     }
 
-    /* Link styling */
+    /* Final message link styling */
     #final-message {
       display: inline-block;
       margin-top: 40px;
@@ -82,11 +49,14 @@
     <p>Just keep this question in the back of your mind if you want to look back on Murasaki's journey across Gensokyo...</p>
     <p><strong><em>Just how remarkable can one human be... in a world where divinity is ordinary?</em></strong></p>
 
-    <img src="assets/itsfinallyover.png" alt="Thank you." title="Thank you.">
+    <!-- Reward image -->
+    <img id="reward-img" src="assets/itsfinallyover.png" alt="Thank you." title="Thank you.">
 
+    <!-- Background audio -->
     <audio id="bg-music" src="assets/music/neverendingnight.mp3" autoplay loop style="display:none;"></audio>
     <p id="track-credit">Track credit: Toby Fox - Neverending Night</p>
 
+    <!-- Final message link -->
     <a id="final-message" href="final_farewell.html">Click here for one last message from Murasaki...</a>
   </div>
 </body>
