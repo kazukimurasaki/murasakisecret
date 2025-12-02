@@ -5,6 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heads Up!</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Gate page styles */
+    #gate-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #gate-text {
+      max-width: 600px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideIn 1.2s forwards;
+    }
+
+    #continue-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body id="gate-page">
   <div id="gate-text">
@@ -14,10 +53,24 @@
     <button id="continue-btn">Continue</button>
   </div>
 
+  <!-- Error sound to trigger autoplay -->
+  <audio id="error-audio" src="assets/error.mp3" autoplay></audio>
+
   <script>
+    const errorAudio = document.getElementById('error-audio');
+
+    // Try to play error audio immediately
+    errorAudio.play().catch(() => {
+      console.warn("Autoplay blocked — user interaction may be required.");
+    });
+
     document.getElementById("continue-btn").addEventListener("click", () => {
       // Redirect to the main page
       window.location.href = "main.html";
+
+      // Optional: stop the error sound
+      errorAudio.pause();
+      errorAudio.currentTime = 0;
     });
   </script>
 </body>
