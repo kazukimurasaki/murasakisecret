@@ -75,21 +75,24 @@ body {
 /* Existing styles */
 body {
   margin: 0;
-  padding: 0;
-  height: 100%;
+  padding: 40px 0; /* top/bottom padding */
   background: black;
   color: white;
   font-family: sans-serif;
-  display: flex;
-  justify-content: center;
   text-align: center;
-  padding-top: 40px; /* top spacing */
+  /* remove display: flex and justify-content */
+  overflow-y: auto; /* ensure scrolling */
 }
 
 #more-text {
   max-width: 800px;
-  padding: 20px;
+  margin: 0 auto; /* center horizontally */
+  padding: 0 20px;
 }
+
+.spacing-1 { margin-bottom: 1em; }
+.spacing-5 { margin-bottom: 5em; }
+.spacing-10 { margin-bottom: 10em; }
 
 #reward-img {
   margin-top: 20px;
