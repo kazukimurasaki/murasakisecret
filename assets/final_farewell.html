@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Farewell</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+    }
+
+    #vhs-recorder {
+      width: 300px; /* adjust size as needed */
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Transparent VHS image -->
+  <img id="vhs-recorder" src="assets/vhs_recorder.png" alt="VHS Recorder" title="Click to play farewell audio">
+
+  <!-- Audio file -->
+  <audio id="farewell-audio" src="assets/farewell.mp3"></audio>
+
+  <script>
+    const vhs = document.getElementById('vhs-recorder');
+    const audio = document.getElementById('farewell-audio');
+
+    vhs.addEventListener('click', () => {
+      audio.play().catch(() => {
+        console.warn("Audio autoplay blocked. Click required.");
+      });
+    });
+  </script>
+</body>
+</html>
