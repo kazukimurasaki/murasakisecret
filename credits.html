@@ -20,19 +20,19 @@
     font-family: "TheTojoCaptioner", "Courier New", monospace;
     scroll-behavior: smooth;
     overflow-y: auto;
+    text-align: center; /* Center all text by default */
   }
 
   .container {
     max-width: 800px;
     margin: 50px auto;
-    padding: 0 20px 80px; /* bottom padding for button */
+    padding: 0 20px 80px;
     line-height: 1.7;
-    text-align: left;
+    text-align: center;
   }
 
   h1 {
     font-size: 28px;
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 40px;
@@ -46,9 +46,11 @@
     padding-bottom: 4px;
   }
 
-  p {
+  p, small, a {
     font-size: 16px;
     margin: 5px 0;
+    text-align: inherit;
+    color: inherit;
   }
 
   small {
@@ -64,6 +66,8 @@
   .fade-in {
     opacity: 0;
     transition: opacity 2s ease-in-out;
+    display: block;
+    margin: 0 auto;
   }
 
   .fade-in.visible {
@@ -71,10 +75,9 @@
   }
 
   #thank-you-image {
-    display: block;
-    margin: 40px auto 20px;
     max-width: 70%;
     height: auto;
+    margin: 40px auto 20px;
   }
 
   #restart-button {
@@ -94,6 +97,10 @@
 
   #restart-button.visible {
     opacity: 1;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>
 </head>
@@ -191,6 +198,9 @@
   <h2>And of course...</h2>
   <p>Murasaki's YouTube subscribers</p>
   <p>All supporters of the Blakeuza series on Nexus Mods</p>
+  <p>And at least, but not least... You! :)</p>
+
+  <p>Track credit: <a href="https://www.youtube.com/watch?v=s7wgU89y6b0" target="_blank">FOREVER by AJ Dispirito</a></p>
 
   <!-- Blakeuza Thank You Image -->
   <img id="thank-you-image" class="fade-in" src="assets/BlakeuzaThankYouAll.png" alt="Thank You All!">
@@ -208,15 +218,15 @@
   // Ensure page starts at top
   window.scrollTo(0,0);
 
-  // Fade in the Thank You image, then button
+  // Fade in the Thank You image first, then the button
   window.addEventListener("load", () => {
     setTimeout(() => {
       thankYouImage.classList.add("visible");
 
       setTimeout(() => {
         restartButton.classList.add("visible");
-      }, 2000); // button fades in 1.5s after image
-    }, 750); // slight delay before starting fade-in
+      }, 2000); // button fades in 2s after image
+    }, 750); // initial delay before image fades in
   });
 </script>
 </body>
