@@ -19,7 +19,7 @@
     color: white;
     font-family: "TheTojoCaptioner", "Courier New", monospace;
     scroll-behavior: smooth;
-    overflow-y: auto; /* allow vertical scrolling */
+    overflow-y: auto;
   }
 
   .container {
@@ -60,10 +60,27 @@
     display: none;
   }
 
+  /* Fade-in elements */
+  .fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+  }
+
+  #thank-you-image {
+    display: block;
+    margin: 40px auto 20px;
+    max-width: 70%;
+    height: auto;
+  }
+
   #restart-button {
     display: block;
     width: fit-content;
-    margin: 80px auto 40px;
+    margin: 20px auto 40px;
     padding: 12px 24px;
     background-color: #7d4071;
     color: white;
@@ -118,7 +135,7 @@
   <p>Tomoaki Nagahama (RGG Dead Souls/of THE END)</p>
   <p>Tsubasa Kurosawa (RGG 5)</p>
 
-  <h2>Additional Thanks and Shoutouts</h2>
+  <h2>Additional Thanks and Shoutouts (including but not limited to)</h2>
   <p><strong>External Media Influences:</strong></p>
   <p>Ryu Ga Gotoku (Especially Lost Judgment: The Kaito Files and Pirate Yakuza in Hawaii)</p>
   <p>Touhou Project (and Blake Izayoi's "Gensokyo Extra" fanfiction)</p>
@@ -168,34 +185,38 @@
   <p>Pootguy</p>
   <p>KattiShroom/Nyo</p>
   <p>RITA</p>
+  <p>Kurisu Murasaki/kurichan_ch</p>
   <p>All of Murasaki's IRL friends</p>
 
   <h2>And of course...</h2>
   <p>Murasaki's YouTube subscribers</p>
   <p>All supporters of the Blakeuza series on Nexus Mods</p>
 
-  <br><br>
-  <p><strong>And at last, but not least, you.</strong></p>
+  <!-- Blakeuza Thank You Image -->
+  <img id="thank-you-image" class="fade-in" src="assets/BlakeuzaThankYouAll.png" alt="Thank You All!">
 
-  <a id="restart-button" href="https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere" target="_blank">
+  <!-- Restart Button -->
+  <a id="restart-button" class="fade-in" href="https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere" target="_blank">
     Want to start from zero again?
   </a>
 </div>
 
 <script>
+  const thankYouImage = document.getElementById("thank-you-image");
   const restartButton = document.getElementById("restart-button");
 
   // Ensure page starts at top
   window.scrollTo(0,0);
 
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight;
-    const clientHeight = document.documentElement.clientHeight;
+  // Fade in the Thank You image, then button
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      thankYouImage.classList.add("visible");
 
-    if (scrollTop + clientHeight >= scrollHeight - 50) {
-      restartButton.classList.add("visible");
-    }
+      setTimeout(() => {
+        restartButton.classList.add("visible");
+      }, 1000); // button fades in 1.5s after image
+    }, 500); // slight delay before starting fade-in
   });
 </script>
 </body>
