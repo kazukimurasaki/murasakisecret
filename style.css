@@ -144,7 +144,7 @@ body#more-page {
   background: black;
   color: white;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "The Tojo Captioner", sans-serif;  /* Updated font here */
   margin: 0;
   padding: 0;
 }
