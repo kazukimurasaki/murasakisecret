@@ -40,18 +40,48 @@ html, body {
   pointer-events: none;
 }
 
-#track-name {
+/* === Updated Track Info Styling === */
+#track-info {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
-  font-family: sans-serif;
-  font-size: 18px;
-  text-decoration: underline;
-  z-index: 2;
+  text-align: center;
+  z-index: 3;
+  max-width: 90%;
 }
 
+/* Refined Track Name */
+#track-name {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #a880ff;
+  text-decoration: none;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 600px;
+  font-family: "The Tojo Captioner", sans-serif;
+  transition: opacity 0.5s ease;
+}
+
+#track-name:hover {
+  text-decoration: underline;
+  color: #cba0ff;
+}
+
+/* Track Timer */
+#timer {
+  display: block;
+  font-size: 16px;
+  color: #ffffffcc;
+  margin-top: 5px;
+  font-family: "The Tojo Captioner", sans-serif;
+}
+
+/* === Read More button === */
 #read-more {
   position: fixed;
   top: 20px;
