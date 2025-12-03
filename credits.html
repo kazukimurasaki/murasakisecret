@@ -3,51 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credits</title>
+  <title>Murasaki Everywhere & Blakeuza Credits</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
+    @font-face {
+      font-family: "TheTojoCaptioner";
+      src: url("assets/fonts/TheTojoCaptioner-Regular.ttf") format("truetype");
+      font-display: swap;
+    }
+
     body {
       background-color: black;
       color: white;
-      font-family: "Courier New", monospace;
+      font-family: "TheTojoCaptioner", "Courier New", monospace;
       margin: 0;
       padding: 0;
+      overflow-y: scroll;
       overflow-x: hidden;
-      overflow-y: auto;
-    }
-
-    /* Top-right "Credits" label */
-    .corner-label {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      font-size: 20px;
-      opacity: 0.8;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      scroll-behavior: smooth;
     }
 
     .container {
       max-width: 800px;
       margin: 100px auto;
+      padding: 0 20px 100px;
+      line-height: 1.7;
       text-align: left;
-      padding: 0 20px;
-      line-height: 1.6;
     }
 
     h1 {
       font-size: 28px;
       text-align: center;
-      margin-bottom: 40px;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
     }
 
     h2 {
       font-size: 22px;
       margin-top: 40px;
       text-transform: uppercase;
-      border-bottom: 1px solid #555;
-      padding-bottom: 5px;
+      border-bottom: 1px solid #666;
+      padding-bottom: 4px;
     }
 
     p, li {
@@ -60,6 +58,10 @@
       opacity: 0.8;
     }
 
+    ul {
+      margin-left: 20px;
+    }
+
     audio {
       display: none;
     }
@@ -67,13 +69,10 @@
 </head>
 <body>
 
-  <!-- Background BGM -->
+  <!-- Background music -->
   <audio autoplay loop>
     <source src="assets/music/forever.mp3" type="audio/mpeg">
   </audio>
-
-  <!-- Fixed "Credits" label -->
-  <div class="corner-label">Credits</div>
 
   <div class="container">
     <h1>Murasaki Everywhere & Blakeuza Credits</h1>
