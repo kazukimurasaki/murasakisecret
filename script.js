@@ -21,33 +21,47 @@ const tracks = [
   { name: "Rasen by jon-YAKITORY feat. Ado (R3 Music Box)", src: "assets/music/rasen.mp3", url: "https://www.youtube.com/watch?v=PFvsHw5IdS8" }
 ];
 
-// Get last track index from localStorage
 const lastIndex = localStorage.getItem("lastTrackIndex");
-
-// Choose new track randomly (no repeat on refresh)
 let newIndex;
+
 do {
   newIndex = Math.floor(Math.random() * tracks.length);
 } while (newIndex == lastIndex && tracks.length > 1);
 
 const randomTrack = tracks[newIndex];
-
-// Refresh audio
 const audio = document.getElementById("bg-music");
+const trackName = document.getElementById("track-name");
+const timer = document.getElementById("timer");
+
+// Set and play track
 audio.src = randomTrack.src;
 audio.play().catch(() => { console.warn("Autoplay blocked — user interaction needed."); });
 
-// Update track name/link
-const trackName = document.getElementById("track-name");
-if (trackName) {
-  trackName.textContent = randomTrack.name;
-  trackName.href = randomTrack.url;
-}
+// Update track name and link
+trackName.textContent = randomTrack.name;
+trackName.href = randomTrack.url;
 
-// Store index
+// Save index
 localStorage.setItem("lastTrackIndex", newIndex);
 
-// Auto-play next track when current ends
+// Update timer display
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+}
+
+function updateTimer() {
+  const current = formatTime(audio.currentTime);
+  const total = isNaN(audio.duration) ? "00:00" : formatTime(audio.duration);
+  timer.textContent = `${current} / ${total}`;
+}
+
+// Refresh timer every second
+audio.addEventListener("timeupdate", updateTimer);
+audio.addEventListener("loadedmetadata", updateTimer);
+
+// Handle next random track when current ends
 audio.addEventListener("ended", () => {
   let nextIndex;
   do {
@@ -56,12 +70,9 @@ audio.addEventListener("ended", () => {
 
   const nextTrack = tracks[nextIndex];
   audio.src = nextTrack.src;
-  audio.play().catch(() => { console.warn("Autoplay blocked — user interaction needed."); });
-
-  if (trackName) {
-    trackName.textContent = nextTrack.name;
-    trackName.href = nextTrack.url;
-  }
-
+  trackName.textContent = nextTrack.name;
+  trackName.href = nextTrack.url;
   localStorage.setItem("lastTrackIndex", nextIndex);
+
+  audio.play().catch(() => { console.warn("Autoplay blocked — user interaction needed."); });
 });
