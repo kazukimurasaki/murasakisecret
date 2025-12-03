@@ -19,6 +19,7 @@
     color: white;
     font-family: "TheTojoCaptioner", "Courier New", monospace;
     scroll-behavior: smooth;
+    overflow-y: auto; /* allow vertical scrolling */
   }
 
   .container {
@@ -59,7 +60,6 @@
     display: none;
   }
 
-  /* Fade-in button styling */
   #restart-button {
     display: block;
     width: fit-content;
@@ -81,6 +81,7 @@
 </style>
 </head>
 <body>
+
 <audio autoplay loop>
   <source src="assets/music/forever.mp3" type="audio/mpeg">
 </audio>
@@ -128,6 +129,51 @@
   <p>The Living Tombstone</p>
   <p>Scott Cawthon's "Five Nights at Freddy's"</p>
 
+  <h2>Blake Izayoi's Social Hub</h2>
+  <p>AlexnYay</p>
+  <p>Wllox</p>
+  <p>GioBlack</p>
+  <p>2huscarlet9</p>
+  <p>KierenEffect</p>
+  <p>Lucysundial</p>
+  <p>Theonlyliz4349/"Ladz"</p>
+  <p>"A Normal Oozora Subaru Simp"</p>
+  <p>Bobbys_shop (yakuza 5 for the win)</p>
+  <p>Meta_2150</p>
+  <p>Roxanne/poprox</p>
+  <p>Alpon_gaming</p>
+  <p>Azuregill</p>
+  <p>524caret</p>
+  <p>Gatcha Gamer</p>
+
+  <h2>Church of Yoshino</h2>
+  <p>Conte</p>
+  <p>CrazehBoi</p>
+  <p>c_aw_miko/Miko</p>
+  <p>Shadeoskullex</p>
+  <p>scoongula/Ro</p>
+  <p>kamikazziee/Kami</p>
+
+  <h2>Other Individuals</h2>
+  <p>Akoya</p>
+  <p>Gripou</p>
+  <p>Zamndatsu</p>
+  <p>TheWaffleMan101</p>
+  <p>yukikatsura</p>
+  <p>NotoriousNuisance</p>
+  <p>Moirussv</p>
+  <p>Kaybee</p>
+  <p>Prodabic</p>
+  <p>SomebodyVA</p>
+  <p>Pootguy</p>
+  <p>KattiShroom/Nyo</p>
+  <p>RITA</p>
+  <p>All of Murasaki's IRL friends</p>
+
+  <h2>And of course...</h2>
+  <p>Murasaki's YouTube subscribers</p>
+  <p>All supporters of the Blakeuza series on Nexus Mods</p>
+
   <br><br>
   <p><strong>And at last, but not least, you.</strong></p>
 
@@ -139,7 +185,7 @@
 <script>
   const restartButton = document.getElementById("restart-button");
 
-  // Ensure page always starts at top
+  // Ensure page starts at top
   window.scrollTo(0,0);
 
   window.addEventListener("scroll", () => {
