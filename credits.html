@@ -1,218 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Murasaki Everywhere & Blakeuza Credits</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Murasaki Everywhere & Blakeuza Credits</title>
+<style>
+  @font-face {
+    font-family: "TheTojoCaptioner";
+    src: url("assets/fonts/TheTojoCaptioner-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
 
-  <style>
-    @font-face {
-      font-family: "TheTojoCaptioner";
-      src: url("assets/fonts/TheTojoCaptioner-Regular.ttf") format("truetype");
-      font-display: swap;
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: "TheTojoCaptioner", "Courier New", monospace;
+    scroll-behavior: smooth;
+  }
 
-    body {
-      background-color: black;
-      color: white;
-      font-family: "TheTojoCaptioner", "Courier New", monospace;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px 80px; /* bottom padding for button */
+    line-height: 1.7;
+    text-align: left;
+  }
 
-    .container {
-      max-width: 800px;
-      margin: 100px auto 0;
-      padding: 0 20px;
-      line-height: 1.7;
-      text-align: left;
-    }
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
 
-    h1 {
-      font-size: 28px;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 40px;
-    }
+  h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #666;
+    padding-bottom: 4px;
+  }
 
-    h2 {
-      font-size: 22px;
-      margin-top: 40px;
-      text-transform: uppercase;
-      border-bottom: 1px solid #666;
-      padding-bottom: 4px;
-    }
+  p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
 
-    p {
-      font-size: 16px;
-      margin: 5px 0;
-    }
+  small {
+    font-size: 12px;
+    opacity: 0.8;
+  }
 
-    small {
-      font-size: 12px;
-      opacity: 0.8;
-    }
+  audio {
+    display: none;
+  }
 
-    audio {
-      display: none;
-    }
+  /* Fade-in button styling */
+  #restart-button {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 40px;
+    padding: 12px 24px;
+    background-color: #7d4071;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
 
-    /* Fade-in button styling */
-    #restart-button {
-      display: block;
-      width: fit-content;
-      margin: 80px auto 80px;
-      padding: 12px 24px;
-      background-color: #7d4071;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      font-size: 18px;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-    }
-
-    #restart-button.visible {
-      opacity: 1;
-    }
-  </style>
+  #restart-button.visible {
+    opacity: 1;
+  }
+</style>
 </head>
 <body>
 
-  <audio autoplay loop>
-    <source src="assets/music/forever.mp3" type="audio/mpeg">
-  </audio>
+<div class="container">
+  <h1>Murasaki Everywhere & Blakeuza Credits</h1>
 
-  <div class="container">
-    <h1>Murasaki Everywhere & Blakeuza Credits</h1>
+  <p>Kazuki Murasaki - Co-Creator, Lead Director, Writer, Editor, Mod Developer and Web Developer 
+    <small>(and probably a couple of other things I'm forgetting)</small>
+  </p>
 
-    <p>Kazuki Murasaki - Co-Creator, Lead Director, Writer, Editor, Mod Developer and Web Developer 
-      <small>(and probably a couple of other things I'm forgetting)</small>
-    </p>
+  <p>Blake Izayoi - Co-Creator and Co-Writer</p>
 
-    <p>Blake Izayoi - Co-Creator and Co-Writer</p>
+  <h2>Cast of Inserts</h2>
+  <p>Kazuki Murasaki - Himself<br>Likeness: Goro Majima</p>
+  <p>Blake Izayoi - Himself<br>"Likeness": Kazuma Kiryu(?)</p>
+  <p>Mister Expo, 1st Murasaki Family Lieutenant - Ripjaw66609<br>Likeness: Nishida (Yakuza 2)</p>
+  <p>Tangerine Mercenary, 2nd Lieutenant - Tangerine Paint</p>
+  <p>Suwako Moriya, Ex-Moriya Goddess & 3rd Lieutenant - SWK_MRYA</p>
+  <p>Hiyatin, Murasaki Family Captain - cursed_cretin97<br>Likeness: Hiyama (Yakuza Kiwami) and Rodriguez (Pirate Yakuza in Hawaii)</p>
+  <p>Taiga Hamjima - Spooky Hamm<br>Likeness: Taiga Saejima (Yakuza 4)</p>
+  <p>Mikuro Katsinami, Murasaki Family Member - Ei8hT/QueenKatsin<br>Likeness: Saori Shirosaki (Judgment)</p>
+  <p>Teruhiko Shigomi, Ex-Omi and Murasaki Family Member - "Trash-chan"<br>Likeness: Teruhiko Shigaki (Pirate Yakuza in Hawaii)</p>
+  <p>Satori Komeiji, Murasaki Construction Secretary - lonelypigman</p>
 
-    <h2>Cast of Inserts</h2>
-    <p>Kazuki Murasaki - Himself<br>Likeness: Goro Majima</p>
-    <p>Blake Izayoi - Himself<br>"Likeness": Kazuma Kiryu(?)</p>
-    <p>Mister Expo, 1st Murasaki Family Lieutenant - Ripjaw66609<br>Likeness: Nishida (Yakuza 2)</p>
-    <p>Tangerine Mercenary, 2nd Lieutenant - Tangerine Paint</p>
-    <p>Suwako Moriya, Ex-Moriya Goddess & 3rd Lieutenant - SWK_MRYA</p>
-    <p>Hiyatin, Murasaki Family Captain - cursed_cretin97<br>Likeness: Hiyama (Yakuza Kiwami) and Rodriguez (Pirate Yakuza in Hawaii)</p>
-    <p>Taiga Hamjima - Spooky Hamm<br>Likeness: Taiga Saejima (Yakuza 4)</p>
-    <p>Mikuro Katsinami, Murasaki Family Member - Ei8hT/QueenKatsin<br>Likeness: Saori Shirosaki (Judgment)</p>
-    <p>Teruhiko Shigomi, Ex-Omi and Murasaki Family Member - "Trash-chan"<br>Likeness: Teruhiko Shigaki (Pirate Yakuza in Hawaii)</p>
-    <p>Satori Komeiji, Murasaki Construction Secretary - lonelypigman</p>
+  <h2>Featured Cast of Ryu Ga Gotoku</h2>
+  <p>Kazuma Kiryu</p>
+  <p>Daisaku Kuze (RGG 0)</p>
+  <p>Homare Nishitani (RGG 0)</p>
+  <p>Oishi of the Kijin Clan (RGG 0)</p>
+  <p>Homare Nishitani III (RGG Gaiden)</p>
+  <p><small>Disclaimer: His real name Seojun Kang is an original Murasaki Everywhere concept. Not official RGG canon.</small></p>
+  <p>Shimizu, Kijin Clan Captain (RGG Gaiden)</p>
+  <p>Tomoaki Nagahama (RGG Dead Souls/of THE END)</p>
+  <p>Tsubasa Kurosawa (RGG 5)</p>
 
-    <h2>Featured Cast of Ryu Ga Gotoku</h2>
-    <p>Kazuma Kiryu</p>
-    <p>Daisaku Kuze (RGG 0)</p>
-    <p>Homare Nishitani (RGG 0)</p>
-    <p>Oishi of the Kijin Clan (RGG 0)</p>
-    <p>Homare Nishitani III (RGG Gaiden)</p>
-    <p><small>Disclaimer: His real name Seojun Kang is an original Murasaki Everywhere concept. Not official RGG canon.</small></p>
-    <p>Shimizu, Kijin Clan Captain (RGG Gaiden)</p>
-    <p>Tomoaki Nagahama (RGG Dead Souls/of THE END)</p>
-    <p>Tsubasa Kurosawa (RGG 5)</p>
+  <h2>Additional Thanks and Shoutouts</h2>
+  <p><strong>External Media Influences:</strong></p>
+  <p>Ryu Ga Gotoku (Especially Lost Judgment: The Kaito Files and Pirate Yakuza in Hawaii)</p>
+  <p>Touhou Project (and Blake Izayoi's "Gensokyo Extra" fanfiction)</p>
+  <p>ENA</p>
+  <p>Liam Vickers' "Murder Drones"</p>
+  <p>Gooseworx' "The Amazing Digital Circus"</p>
+  <p>Team Fortress 2 (initially)</p>
+  <p>The Living Tombstone</p>
+  <p>Scott Cawthon's "Five Nights at Freddy's"</p>
 
-    <h2>Blakeuza Mod Contributors</h2>
-    <p>2VE</p>
-    <p>Triple AAA</p>
-    <p>Spurge</p>
-    <p>adidaskote</p>
-    <p>Fat CJ</p>
-    <p>Yakuza Modding Community and the Church of Yoshino including Nero the Yoshino Guy</p>
+  <br><br>
+  <p><strong>And at last, but not least, you.</strong></p>
 
-    <h2>Murasaki Everywhere Peer Reviewers</h2>
-    <p>Spooky Hamm</p>
-    <p>Ei8ht</p>
-    <p>Moirussv</p>
-    <p>Alpon Gaming</p>
-    <p>Wllox</p>
+  <a id="restart-button" href="https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere" target="_blank">
+    Want to start from zero again?
+  </a>
+</div>
 
-    <h2>Additional Thanks and Shoutouts</h2>
-    <p><strong>External Media Influences:</strong></p>
-    <p>Ryu Ga Gotoku (Especially Lost Judgment: The Kaito Files and Pirate Yakuza in Hawaii)</p>
-    <p>Touhou Project (and Blake Izayoi's "Gensokyo Extra" fanfiction)</p>
-    <p>ENA</p>
-    <p>Liam Vickers' "Murder Drones"</p>
-    <p>Gooseworx' "The Amazing Digital Circus"</p>
-    <p>Team Fortress 2 (initially)</p>
-    <p>The Living Tombstone</p>
-    <p>Scott Cawthon's "Five Nights at Freddy's"</p>
+<script>
+  const restartButton = document.getElementById("restart-button");
 
-    <h2>Blake Izayoi's Social Hub</h2>
-    <p>AlexnYay</p>
-    <p>Wllox</p>
-    <p>GioBlack</p>
-    <p>2huscarlet9</p>
-    <p>KierenEffect</p>
-    <p>Lucysundial</p>
-    <p>Theonlyliz4349/"Ladz"</p>
-    <p>"A Normal Oozora Subaru Simp"</p>
-    <p>Bobbys_shop (yakuza 5 for the win)</p>
-    <p>Meta_2150</p>
-    <p>Roxanne/poprox</p>
-    <p>Alpon_gaming</p>
-    <p>Azuregill</p>
-    <p>524caret</p>
-    <p>Gatcha Gamer</p>
+  // Ensure page always starts at top
+  window.scrollTo(0,0);
 
-    <h2>Church of Yoshino</h2>
-    <p>Conte</p>
-    <p>CrazehBoi</p>
-    <p>c_aw_miko/Miko</p>
-    <p>Shadeoskullex</p>
-    <p>scoongula/Ro</p>
-    <p>kamikazziee/Kami</p>
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
 
-    <h2>Other Individuals</h2>
-    <p>Akoya</p>
-    <p>Gripou</p>
-    <p>Zamndatsu</p>
-    <p>TheWaffleMan101</p>
-    <p>yukikatsura</p>
-    <p>NotoriousNuisance</p>
-    <p>Moirussv</p>
-    <p>Kaybee</p>
-    <p>Prodabic</p>
-    <p>SomebodyVA</p>
-    <p>Pootguy</p>
-    <p>KattiShroom/Nyo</p>
-    <p>RITA</p>
-    <p>All of Murasaki's IRL friends</p>
-
-    <h2>And of course...</h2>
-    <p>Murasaki's YouTube subscribers</p>
-    <p>All supporters of the Blakeuza series on Nexus Mods</p>
-    <br><br>
-    <p><strong>And at last, but not least, you.</strong></p>
-
-    <a id="restart-button" href="https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere" target="_blank">
-      Want to start from zero again?
-    </a>
-  </div>
-
-  <script>
-    const restartButton = document.getElementById("restart-button");
-
-    // Ensure page always starts at top
-    window.scrollTo(0, 0);
-
-    window.addEventListener("scroll", () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-      const clientHeight = document.documentElement.clientHeight || window.innerHeight;
-
-      if (scrollTop + clientHeight >= scrollHeight - 50) {
-        restartButton.classList.add("visible");
-      }
-    });
-  </script>
+    if (scrollTop + clientHeight >= scrollHeight - 50) {
+      restartButton.classList.add("visible");
+    }
+  });
+</script>
 </body>
 </html>
