@@ -20,7 +20,7 @@
     font-family: "TheTojoCaptioner", "Courier New", monospace;
     scroll-behavior: smooth;
     overflow-y: auto;
-    text-align: center; /* Center all text by default */
+    text-align: center;
   }
 
   .container {
@@ -29,6 +29,12 @@
     padding: 0 20px 80px;
     line-height: 1.7;
     text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .container.visible {
+    opacity: 1;
   }
 
   h1 {
@@ -106,11 +112,11 @@
 </head>
 <body>
 
-<audio autoplay loop>
+<audio id="bg-music" autoplay loop>
   <source src="assets/music/forever.mp3" type="audio/mpeg">
 </audio>
 
-<div class="container">
+<div class="container" id="credits-container">
   <h1>Murasaki Everywhere & Blakeuza Credits</h1>
 
   <p>Kazuki Murasaki - Co-Creator, Lead Director, Writer, Editor, Mod Developer and Web Developer 
@@ -216,7 +222,6 @@
   <br><br>
   <p>Track credit: <a href="https://www.youtube.com/watch?v=s7wgU89y6b0" target="_blank">FOREVER by AJ Dispirito</a></p>
 
-  <!-- New Murasaki disclaimer text -->
   <p>
   Murasaki Everywhere is a multimedia fanfiction project published by Murasaki Kiwami Studios.<br>
   Gensokyo Extra is a fanfiction owned by Blake Izayoi.<br><br>
@@ -225,31 +230,42 @@
   Official date of project beginning: May 6th, 2024
   </p>
 
-  <!-- Blakeuza Thank You Image -->
   <img id="thank-you-image" class="fade-in" src="assets/BlakeuzaThankYouAll.png" alt="Thank You All!">
 
-  <!-- Restart Button -->
   <a id="restart-button" class="fade-in" href="https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere" target="_blank">
     Want to start from zero again?
   </a>
 </div>
 
 <script>
+  const audio = document.getElementById("bg-music");
+  const creditsContainer = document.getElementById("credits-container");
   const thankYouImage = document.getElementById("thank-you-image");
   const restartButton = document.getElementById("restart-button");
 
-  // Ensure page starts at top
-  window.scrollTo(0,0);
+  // Always start at top
+  window.scrollTo(0, 0);
 
-  // Fade in the Thank You image first, then the button
-  window.addEventListener("load", () => {
+  // When the audio starts playing, fade in the credits text
+  audio.addEventListener("play", () => {
+    creditsContainer.classList.add("visible");
+
+    // Sequential fade-ins (triggered after main credits visible)
     setTimeout(() => {
       thankYouImage.classList.add("visible");
-
       setTimeout(() => {
         restartButton.classList.add("visible");
-      }, 2000); // button fades in 2s after image
-    }, 750); // initial delay before image fades in
+      }, 2000);
+    }, 3000);
+  });
+
+  // Fallback in case autoplay is blocked — fade in after short delay
+  audio.addEventListener("error", () => {
+    setTimeout(() => {
+      creditsContainer.classList.add("visible");
+      thankYouImage.classList.add("visible");
+      restartButton.classList.add("visible");
+    }, 1500);
   });
 </script>
 </body>
