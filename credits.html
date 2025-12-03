@@ -19,7 +19,6 @@
       font-family: "TheTojoCaptioner", "Courier New", monospace;
       margin: 0;
       padding: 0;
-      overflow-y: scroll;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
@@ -27,7 +26,7 @@
     .container {
       max-width: 800px;
       margin: 100px auto;
-      padding: 0 20px 100px;
+      padding: 0 20px 200px;
       line-height: 1.7;
       text-align: left;
     }
@@ -48,7 +47,7 @@
       padding-bottom: 4px;
     }
 
-    p, li {
+    p {
       font-size: 16px;
       margin: 5px 0;
     }
@@ -58,18 +57,32 @@
       opacity: 0.8;
     }
 
-    ul {
-      margin-left: 20px;
-    }
-
     audio {
       display: none;
+    }
+
+    #restart-button {
+      display: block;
+      width: fit-content;
+      margin: 80px auto 40px;
+      padding: 12px 24px;
+      background-color: #7d4071;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    #restart-button.visible {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
 
-  <!-- Background music -->
   <audio autoplay loop>
     <source src="assets/music/forever.mp3" type="audio/mpeg">
   </audio>
@@ -77,125 +90,122 @@
   <div class="container">
     <h1>Murasaki Everywhere & Blakeuza Credits</h1>
 
-    <p>Kazuki Murasaki - Co-Creator, Lead Director, Writer, Editor, Mod Developer and Web Developer <small>(and probably a couple of other things I'm forgetting)</small></p>
-    <br<p>Blake Izayoi - Co-Creator and Co-Writer</p>
+    <p>Kazuki Murasaki - Co-Creator, Lead Director, Writer, Editor, Mod Developer and Web Developer 
+      <small>(and probably a couple of other things I'm forgetting)</small>
+    </p>
+
+    <p>Blake Izayoi - Co-Creator and Co-Writer</p>
 
     <h2>Cast of Inserts</h2>
     <p>Kazuki Murasaki - Himself<br>Likeness: Goro Majima</p>
-    
-    <br><p>Blake Izayoi - Himself<br>"Likeness": Kazuma Kiryu(?)</p>
-    
-    <br><p>Mister Expo, 1st Murasaki Family Lieutenant - Ripjaw66609<br>Likeness: Nishida (Yakuza 2)</p>
-    
-    <br><p>Tangerine Mercenary, 2nd Lieutenant - Tangerine Paint</p>
-    
-    <br><p>Suwako Moriya, Ex-Moriya Goddess & 3rd Lieutenant - SWK_MRYA</p>
-    
-    <br><p>Hiyatin, Murasaki Family Captain - cursed_cretin97<br>Likeness: Hiyama (Yakuza Kiwami) and Rodriguez (Pirate Yakuza in Hawaii)</p>
-    
-    <br><p>Taiga Hamjima - Spooky Hamm<br>Likeness: Taiga Saejima (Yakuza 4)</p>
-    
-    <br><p>Mikuro Katsinami, Murasaki Family Member - Ei8hT/QueenKatsin<br>Likeness: Saori Shirosaki (Judgment)</p>
-    
-    <br><p>Teruhiko Shigomi, Ex-Omi and Murasaki Family Member - "Trash-chan"<br>Likeness: Teruhiko Shigaki (Pirate Yakuza in Hawaii)</p>
-    
-    <br><p>Satori Komeiji, Murasaki Construction Secretary - lonelypigman</p>
+    <p>Blake Izayoi - Himself<br>"Likeness": Kazuma Kiryu(?)</p>
+    <p>Mister Expo, 1st Murasaki Family Lieutenant - Ripjaw66609<br>Likeness: Nishida (Yakuza 2)</p>
+    <p>Tangerine Mercenary, 2nd Lieutenant - Tangerine Paint</p>
+    <p>Suwako Moriya, Ex-Moriya Goddess & 3rd Lieutenant - SWK_MRYA</p>
+    <p>Hiyatin, Murasaki Family Captain - cursed_cretin97<br>Likeness: Hiyama (Yakuza Kiwami) and Rodriguez (Pirate Yakuza in Hawaii)</p>
+    <p>Taiga Hamjima - Spooky Hamm<br>Likeness: Taiga Saejima (Yakuza 4)</p>
+    <p>Mikuro Katsinami, Murasaki Family Member - Ei8hT/QueenKatsin<br>Likeness: Saori Shirosaki (Judgment)</p>
+    <p>Teruhiko Shigomi, Ex-Omi and Murasaki Family Member - "Trash-chan"<br>Likeness: Teruhiko Shigaki (Pirate Yakuza in Hawaii)</p>
+    <p>Satori Komeiji, Murasaki Construction Secretary - lonelypigman</p>
 
     <h2>Featured Cast of Ryu Ga Gotoku</h2>
-    <ul>
-      <p>Kazuma Kiryu<p>
-      <br><p>Daisaku Kuze (RGG 0)</p>
-      <br><p>Homare Nishitani (RGG 0)</p>
-      <br><p>Oishi of the Kijin Clan (RGG 0)</p>
-      <br><p>Homare Nishitani III (RGG Gaiden)</p>
-    <p><small>Disclaimer: His real name Seojun Kang is an original Murasaki Everywhere concept. Not official RGG canon.</small></p>
-      <br><p>Shimizu, Kijin Clan Captain (RGG Gaiden)</p>
-      <br><p>Tomoaki Nagahama (RGG Dead Souls/of THE END)</p>
-      <br><p>Tsubasa Kurosawa (RGG 5)</p>
-    </ul>
+    <p>Kazuma Kiryu</p>
+    <p>Daisaku Kuze (RGG 0)</p>
+    <p>Homare Nishitani (RGG 0)</p>
+    <p>Oishi of the Kijin Clan (RGG 0)</p>
+    <p>Homare Nishitani III (RGG Gaiden)</p>
+    <small>Disclaimer: His real name Seojun Kang is an original Murasaki Everywhere concept. Not official RGG canon.</small>
+    <p>Shimizu, Kijin Clan Captain (RGG Gaiden)</p>
+    <p>Tomoaki Nagahama (RGG Dead Souls/of THE END)</p>
+    <p>Tsubasa Kurosawa (RGG 5)</p>
 
     <h2>Blakeuza Mod Contributors</h2>
-    <ul>
-      <p>2VE<p>
-      <p>Triple AAA<p>
-      <p>Spurge<p>
-      <p>adidaskote<p>
-      <p>Fat CJ<p>
-      <p>Yakuza Modding Community and the Church of Yoshino including Nero the Yoshino Guy<p>
-    </ul>
+    <p>2VE</p>
+    <p>Triple AAA</p>
+    <p>Spurge</p>
+    <p>adidaskote</p>
+    <p>Fat CJ</p>
+    <p>Yakuza Modding Community and the Church of Yoshino including Nero the Yoshino Guy</p>
 
     <h2>Murasaki Everywhere Peer Reviewers</h2>
-    <ul>
-      <p>Spooky Hamm<p>
-      <p>Ei8ht<p>
-      <p>Moirussv<p>
-      <p>Alpon Gaming<p>
-      <p>Wllox<p>
-    </ul>
+    <p>Spooky Hamm</p>
+    <p>Ei8ht</p>
+    <p>Moirussv</p>
+    <p>Alpon Gaming</p>
+    <p>Wllox</p>
 
     <h2>Additional Thanks and Shoutouts</h2>
     <p><strong>External Media Influences:</strong></p>
-    <ul>
-      <p>Ryu Ga Gotoku (Especially Lost Judgment: The Kaito Files and Pirate Yakuza in Hawaii)<p>
-      <p>Touhou Project (and Blake Izayoi's "Gensokyo Extra" fanfiction)<p>
-      <p>ENA<p>
-      <p>Liam Vickers' "Murder Drones"<p>
-      <p>Gooseworx' "The Amazing Digital Circus"<p>
-      <p>Team Fortress 2 (initially)<p>
-      <p>The Living Tombstone<p>
-      <p>Scott Cawthon's "Five Nights at Freddy's" (by extension, due to Murasaki originally being based around memes surrounding "Purple Guy")<p>
-    </ul>
+    <p>Ryu Ga Gotoku (Especially Lost Judgment: The Kaito Files and Pirate Yakuza in Hawaii)</p>
+    <p>Touhou Project (and Blake Izayoi's "Gensokyo Extra" fanfiction)</p>
+    <p>ENA</p>
+    <p>Liam Vickers' "Murder Drones"</p>
+    <p>Gooseworx' "The Amazing Digital Circus"</p>
+    <p>Team Fortress 2 (initially)</p>
+    <p>The Living Tombstone</p>
+    <p>Scott Cawthon's "Five Nights at Freddy's"</p>
 
     <h2>Blake Izayoi's Social Hub</h2>
-    <ul>
-      <p>AlexnYay<p>
-      <p>Wllox<p>
-      <p>GioBlack<p>
-      <p>2huscarlet9<p>
-      <p>KierenEffect<p>
-      <p>Lucysundial<p>
-      <p>Theonlyliz4349/"Ladz"<p>
-      <p>"A Normal Oozora Subaru Simp"<p>
-      <p>Bobbys_shop (yakuza 5 for the win)<p>
-      <p>Meta_2150<p>
-      <p>Roxanne/poprox<p>
-      <p>Alpon_gaming<p>
-      <p>Azuregill<p>
-      <p>524caret<p>
-      <p>Gatcha Gamer<p>
-      <p>Church of Yoshino<p>
-      <p>Conte<p>
-      <p>CrazehBoi<p>
-      <p>c_aw_miko/Miko<p>
-      <p>Shadeoskullex<p>
-      <p>scoongula/Ro<p>
-      <p>kamikazziee/Kami<p>
-    </ul>
+    <p>AlexnYay</p>
+    <p>Wllox</p>
+    <p>GioBlack</p>
+    <p>2huscarlet9</p>
+    <p>KierenEffect</p>
+    <p>Lucysundial</p>
+    <p>Theonlyliz4349/"Ladz"</p>
+    <p>"A Normal Oozora Subaru Simp"</p>
+    <p>Bobbys_shop (yakuza 5 for the win)</p>
+    <p>Meta_2150</p>
+    <p>Roxanne/poprox</p>
+    <p>Alpon_gaming</p>
+    <p>Azuregill</p>
+    <p>524caret</p>
+    <p>Gatcha Gamer</p>
+    
+    <h2>Church of Yoshino</h2>
+    <p>Conte</p>
+    <p>CrazehBoi</p>
+    <p>c_aw_miko/Miko</p>
+    <p>Shadeoskullex</p>
+    <p>scoongula/Ro</p>
+    <p>kamikazziee/Kami</p>
 
     <h2>Other Individuals</h2>
-    <ul>
-      <p>Akoya<p>
-      <p>Gripou<p>
-      <p>Zamndatsu<p>
-      <p>TheWaffleMan101<p>
-      <p>yukikatsura<p>
-      <p>NotoriousNuisance<p>
-      <p>Moirussv<p>
-      <p>Kaybee<p>
-      <p>Prodabic<p>
-      <p>SomebodyVA<p>
-      <p>Pootguy<p>
-      <p>KattiShroom/Nyo<p>
-      <p>RITA<p>
-      <p>All of Murasaki's IRL friends<p>
-    </ul>
+    <p>Akoya</p>
+    <p>Gripou</p>
+    <p>Zamndatsu</p>
+    <p>TheWaffleMan101</p>
+    <p>yukikatsura</p>
+    <p>NotoriousNuisance</p>
+    <p>Moirussv</p>
+    <p>Kaybee</p>
+    <p>Prodabic</p>
+    <p>SomebodyVA</p>
+    <p>Pootguy</p>
+    <p>KattiShroom/Nyo</p>
+    <p>RITA</p>
+    <p>All of Murasaki's IRL friends</p>
 
-    <h2>And of course...<h2>
+    <h2>And of course...</h2>
     <p>Murasaki's YouTube subscribers</p>
     <p>All supporters of the Blakeuza series on Nexus Mods</p>
-      <br>
-      <br>
-    <p><strong>And at last, but not least, you. :)<strong></p>
+    <br><br>
+    <p><strong>And at last, but not least, you.</strong></p>
+
+    <a id="restart-button" href="https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere" target="_blank">
+      Want to start from zero again?
+    </a>
   </div>
+
+  <script>
+    const restartButton = document.getElementById("restart-button");
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const scrollHeight = document.body.scrollHeight - window.innerHeight;
+      if (scrollY >= scrollHeight - 50) {
+        restartButton.classList.add("visible");
+      }
+    });
+  </script>
 </body>
 </html>
