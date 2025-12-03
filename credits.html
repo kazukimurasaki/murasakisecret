@@ -25,8 +25,8 @@
 
     .container {
       max-width: 800px;
-      margin: 100px auto;
-      padding: 0 20px 200px;
+      margin: 100px auto 0;
+      padding: 0 20px;
       line-height: 1.7;
       text-align: left;
     }
@@ -61,10 +61,11 @@
       display: none;
     }
 
+    /* Fade-in button styling */
     #restart-button {
       display: block;
       width: fit-content;
-      margin: 80px auto 40px;
+      margin: 80px auto 80px;
       padding: 12px 24px;
       background-color: #7d4071;
       color: white;
@@ -114,7 +115,7 @@
     <p>Homare Nishitani (RGG 0)</p>
     <p>Oishi of the Kijin Clan (RGG 0)</p>
     <p>Homare Nishitani III (RGG Gaiden)</p>
-    <small>Disclaimer: His real name Seojun Kang is an original Murasaki Everywhere concept. Not official RGG canon.</small>
+    <p><small>Disclaimer: His real name Seojun Kang is an original Murasaki Everywhere concept. Not official RGG canon.</small></p>
     <p>Shimizu, Kijin Clan Captain (RGG Gaiden)</p>
     <p>Tomoaki Nagahama (RGG Dead Souls/of THE END)</p>
     <p>Tsubasa Kurosawa (RGG 5)</p>
@@ -161,7 +162,7 @@
     <p>Azuregill</p>
     <p>524caret</p>
     <p>Gatcha Gamer</p>
-    
+
     <h2>Church of Yoshino</h2>
     <p>Conte</p>
     <p>CrazehBoi</p>
@@ -199,10 +200,16 @@
 
   <script>
     const restartButton = document.getElementById("restart-button");
+
+    // Ensure page always starts at top
+    window.scrollTo(0, 0);
+
     window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      const scrollHeight = document.body.scrollHeight - window.innerHeight;
-      if (scrollY >= scrollHeight - 50) {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight || window.innerHeight;
+
+      if (scrollTop + clientHeight >= scrollHeight - 50) {
         restartButton.classList.add("visible");
       }
     });
