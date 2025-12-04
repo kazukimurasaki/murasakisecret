@@ -6,7 +6,7 @@
 <title>Curtain Call</title>
 <style>
   @font-face {
-    font-family: "TheTojoCaptioner";
+    font-family: "The Tojo Captioner";
     src: url("assets/fonts/TheTojoCaptioner-Regular.ttf") format("truetype");
     font-display: swap;
   }
@@ -17,7 +17,7 @@
     height: 100%;
     background-color: black;
     color: white;
-    font-family: "TheTojoCaptioner", "Courier New", monospace;
+    font-family: "The Tojo Captioner", "Courier New", monospace;
     scroll-behavior: smooth;
     overflow-y: auto;
     text-align: center;
@@ -99,6 +99,7 @@
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
     cursor: pointer;
+    font-family: "The Tojo Captioner", "Courier New", monospace;
   }
 
   #restart-button.visible {
@@ -275,7 +276,6 @@
     }, 1500);
   });
 
-  // Dual-action button logic
   restartButton.addEventListener("click", () => {
     window.open("https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere", "_blank");
     window.location.href = "successor.html";
