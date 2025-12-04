@@ -247,7 +247,7 @@
 
   <img id="thank-you-image" class="fade-in" src="assets/BlakeuzaThankYouAll.png" alt="Thank You All!">
 
-  <a id="restart-button" class="fade-in" href="https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere" target="_blank">
+  <a id="restart-button" class="fade-in" href="#" role="button">
     Want to start from zero again?
   </a>
 </div>
@@ -261,11 +261,10 @@
   // Always start at top
   window.scrollTo(0, 0);
 
-  // When the audio starts playing, fade in the credits text
+  // Fade-in sequence when audio starts
   audio.addEventListener("play", () => {
     creditsContainer.classList.add("visible");
 
-    // Sequential fade-ins (triggered after main credits visible)
     setTimeout(() => {
       thankYouImage.classList.add("visible");
       setTimeout(() => {
@@ -274,13 +273,20 @@
     }, 3000);
   });
 
-  // Fallback in case autoplay is blocked — fade in after short delay
+  // Fallback for autoplay issues
   audio.addEventListener("error", () => {
     setTimeout(() => {
       creditsContainer.classList.add("visible");
       thankYouImage.classList.add("visible");
       restartButton.classList.add("visible");
     }, 1500);
+  });
+
+  // Dual-action button: open external link + redirect current tab
+  restartButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.open("https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere", "_blank");
+    window.location.href = "successor.html";
   });
 </script>
 </body>
