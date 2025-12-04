@@ -94,6 +94,29 @@ html, body {
   cursor: pointer;
 }
 
+/* --- Restart button styling --- */
+#restart-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 40px;
+  padding: 12px 24px;
+  background-color: #7d4071;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  cursor: pointer;
+  font-family: "The Tojo Captioner", sans-serif;
+}
+
+#restart-button:hover {
+  text-decoration: underline;
+  background-color: #945a8a;
+}
+
 /* --- Default body styling (for intro page) --- */
 body {
   margin: 0;
