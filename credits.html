@@ -68,7 +68,6 @@
     display: none;
   }
 
-  /* Fade-in elements */
   .fade-in {
     opacity: 0;
     transition: opacity 2s ease-in-out;
@@ -99,6 +98,7 @@
     font-size: 18px;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
+    cursor: pointer;
   }
 
   #restart-button.visible {
@@ -210,7 +210,6 @@
   <p>Shadeoskullex</p>
   <p>scoongula/Ro</p>
   <p>kamikazziee/Kami</p>
-  
 
   <h2>Other Individuals</h2>
   <p>Akoya</p>
@@ -232,7 +231,7 @@
   <h2>And of course...</h2>
   <p>Murasaki's YouTube subscribers</p>
   <p>All supporters of the Blakeuza series on Nexus Mods</p>
-  <p>And at last, but not least... You! :)</p>
+  <p>And at last, but not least... You!</p>
 
   <br><br>
   <p>Track credit: <a href="https://www.youtube.com/watch?v=s7wgU89y6b0" target="_blank">FOREVER by AJ Dispirito</a></p>
@@ -247,9 +246,7 @@
 
   <img id="thank-you-image" class="fade-in" src="assets/BlakeuzaThankYouAll.png" alt="Thank You All!">
 
-  <a id="restart-button" class="fade-in" href="#" role="button">
-    Want to start from zero again?
-  </a>
+  <button id="restart-button" class="fade-in">Want to start from zero again?</button>
 </div>
 
 <script>
@@ -258,13 +255,10 @@
   const thankYouImage = document.getElementById("thank-you-image");
   const restartButton = document.getElementById("restart-button");
 
-  // Always start at top
   window.scrollTo(0, 0);
 
-  // Fade-in sequence when audio starts
   audio.addEventListener("play", () => {
     creditsContainer.classList.add("visible");
-
     setTimeout(() => {
       thankYouImage.classList.add("visible");
       setTimeout(() => {
@@ -273,7 +267,6 @@
     }, 3000);
   });
 
-  // Fallback for autoplay issues
   audio.addEventListener("error", () => {
     setTimeout(() => {
       creditsContainer.classList.add("visible");
@@ -282,9 +275,8 @@
     }, 1500);
   });
 
-  // Dual-action button: open external link + redirect current tab
-  restartButton.addEventListener("click", (e) => {
-    e.preventDefault();
+  // Dual-action button logic
+  restartButton.addEventListener("click", () => {
     window.open("https://sites.google.com/view/murasakistudios/projects/murasaki-everywhere", "_blank");
     window.location.href = "successor.html";
   });
